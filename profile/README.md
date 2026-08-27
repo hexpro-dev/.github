@@ -21,24 +21,6 @@ People over profits, applied to what we charge and to what we collect. In practi
 > [!NOTE]
 > Most repositories in this organisation are private while the products they belong to are still being built, and nothing has shipped to a store yet. The tables below say exactly what state each thing is in. A status that quietly overstates itself is the same problem as a claim that does.
 
-```mermaid
-flowchart TB
-    AV["Ars Vitae Pty Ltd"]
-    AV --> HP["Hex Pro"]
-    AV --> HG["Hex Games"]
-
-    HP --> APPS["Apps and browser tools<br/>apps.hex.pro"]
-    HP --> CIT["Hex Citadel<br/>citadel.hex.pro"]
-    HG --> GAM["Game titles<br/>games.hex.pro"]
-
-    classDef brand fill:#0B76D9,stroke:#0B76D9,color:#ffffff
-    classDef grey fill:#6E7681,stroke:#6E7681,color:#ffffff
-    class HP,APPS,CIT brand
-    class AV,HG,GAM grey
-```
-
-One company, two lines of work. This organisation holds the software; the games live in [hexpro-games](https://github.com/hexpro-games).
-
 <br>
 
 ## What we are building
