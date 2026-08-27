@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+  Source for banner-dark.png and banner-light.png.
+
+  Render with Chrome headless at 2x, once per theme:
+
+    chrome --headless=new --hide-scrollbars --force-device-scale-factor=2 \
+           --window-size=1200,312 --screenshot=banner-dark.png banner.html
+    # then add class="light" to <body> for the light variant.
+
+  Requires the Sansation family installed locally (Google Fonts).
+  The three registers echo the logo mark: a hexagon split into three parts.
+-->
+<html><head><meta charset="utf-8"><title>Hex Pro banner</title><style>
+:root{
+  --bg:#080c11; --rule:#1b2530; --rule2:#141d26; --dim:#5f6d7c; --text:#e2e8ef;
+  --blue:#0b76d9; --grey:#9f9f9f; --markop:.11; --glow:.055;
+}
+body.light{
+  --bg:#fcfdfe; --rule:#dbe3ec; --rule2:#e8eef5; --dim:#78889a; --text:#111c27;
+  --markop:.075; --glow:.035;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:312px}
+body{background:var(--bg);font-family:Sansation,sans-serif;position:relative;overflow:hidden}
+.glow{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:760px;height:760px;
+  background:radial-gradient(circle,var(--blue) 0%,transparent 62%);opacity:var(--glow)}
+.topbar{position:absolute;top:0;left:0;right:0;height:5px;z-index:3;
+  background:linear-gradient(90deg,var(--grey) 0%,var(--grey) 51%,var(--blue) 51%,var(--blue) 100%)}
+.hr{position:absolute;left:0;right:0;height:1px;background:var(--rule);z-index:2}
+.hr.a{top:57px}.hr.b{bottom:57px}
+.vr{position:absolute;top:57px;bottom:57px;left:772px;width:1px;background:var(--rule2);z-index:2}
+.cell{overflow:hidden;position:absolute;top:57px;bottom:57px;left:772px;right:0;
+  display:flex;align-items:center;justify-content:center}
+.cell img{width:340px;height:340px;flex:0 0 auto;opacity:var(--markop)}
+.wrap{position:relative;height:100%;display:flex;flex-direction:column;padding:0 74px;z-index:4}
+.reg1,.reg3{height:57px;display:flex;align-items:center;justify-content:space-between;flex:0 0 auto}
+.reg2{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center}
+.meta{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:11.5px;letter-spacing:.2em;
+  color:var(--dim);text-transform:uppercase;white-space:nowrap}
+.logo{width:474px;display:block;margin-left:-3px}
+.tag{font-size:37px;font-weight:300;color:var(--text);letter-spacing:-.005em;margin-top:19px}
+.tag b{font-weight:400;color:var(--blue)}
+.dot{color:var(--blue);margin:0 9px;opacity:.8}
+</style></head><body>
+<div class="glow"></div>
+<div class="topbar"></div>
+<div class="hr a"></div><div class="hr b"></div><div class="vr"></div>
+<div class="cell"><img src="mark.png" alt=""></div>
+<div class="wrap">
+  <div class="reg1">
+    <span class="meta">Ars Vitae Pty Ltd</span>
+    <span class="meta">Australian owned and operated <span class="dot">·</span> ABN 44 687 418 220</span>
+  </div>
+  <div class="reg2">
+    <img class="logo" src="wordmark.png" alt="Hex Pro">
+    <div class="tag">Software for <b>People</b></div>
+  </div>
+  <div class="reg3">
+    <span class="meta">hex.pro</span>
+    <span class="meta">Transparency <span class="dot">·</span> Privacy <span class="dot">·</span> Fair pricing</span>
+  </div>
+</div>
+</body></html>
