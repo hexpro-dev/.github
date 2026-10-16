@@ -19,7 +19,7 @@
 People over profits, applied to what we charge and to what we collect. In practice: no advertising networks, no analytics SDKs inside the apps, and a one-time purchase where there are no servers to pay for.
 
 > [!NOTE]
-> Most repositories in this organisation are private while the products they belong to are still being built, and nothing has shipped to a store yet. The tables below say exactly what state each thing is in. A status that quietly overstates itself is the same problem as a claim that does.
+> Most repositories in this organisation are private while the products they belong to are still being built. Hex NFC is the first to ship: it is on the App Store, and its source is public. The tables below say exactly what state each thing is in. A status that quietly overstates itself is the same problem as a claim that does.
 
 <br>
 
@@ -32,17 +32,17 @@ Five apps, two browser tools and one platform. The status column uses the same w
 <table>
 <tr><th width="52"></th><th align="left">Product</th><th align="left">What it does</th><th>Platform</th><th>Status</th></tr>
 <tr>
+  <td width="52" align="center"><img src="https://raw.githubusercontent.com/hexpro-dev/.github/main/profile/assets/icons/hex-nfc.png" width="36" alt=""></td>
+  <td><b><a href="https://apps.hex.pro/hex-nfc">Hex NFC</a></b><br><sub><a href="https://apps.apple.com/app/id6801457461">App&nbsp;Store</a> &middot; <a href="https://github.com/hexpro-dev/hex-nfc-ios">Source</a></sub></td>
+  <td>A complete NFC reader, writer and tag editor. Eighteen record types, per-family tag protection, passport and transit reading, and a raw command console. Free, with the full source public.</td>
+  <td>iPhone</td>
+  <td><code>Available&nbsp;now</code></td>
+</tr>
+<tr>
   <td width="52" align="center"><img src="https://raw.githubusercontent.com/hexpro-dev/.github/main/profile/assets/icons/sol.png" width="36" alt=""></td>
   <td><b><a href="https://apps.hex.pro/sol">Sol</a></b></td>
   <td>The alarm clock you can't cheat. Six challenges, three layers of enforcement, and alarms owned by iOS itself through AlarmKit, so they survive Silent mode, Focus and a force-quit.</td>
   <td>iPhone<br>iPad</td>
-  <td><code>Coming&nbsp;soon</code></td>
-</tr>
-<tr>
-  <td width="52" align="center"><img src="https://raw.githubusercontent.com/hexpro-dev/.github/main/profile/assets/icons/hex-nfc.png" width="36" alt=""></td>
-  <td><b><a href="https://apps.hex.pro/hex-nfc">Hex NFC</a></b></td>
-  <td>A complete NFC reader, writer and tag editor. Eighteen record types, per-family tag protection, passport and transit reading, and a raw command console.</td>
-  <td>iPhone</td>
   <td><code>Coming&nbsp;soon</code></td>
 </tr>
 <tr>
@@ -169,14 +169,15 @@ The websites are TypeScript end to end and rendered on the server, because a pag
 
 ## Reading the source
 
-The two browser tools are public today. Each one is the source behind a privacy claim made on the website, which is the entire reason for publishing it.
+Three repositories are public today. Each one is the source behind a privacy claim made on the website, which is the entire reason for publishing it.
 
 | Repository | What it is |
 |:--|:--|
+| [**hex-nfc-ios**](https://github.com/hexpro-dev/hex-nfc-ios) | Hex NFC, the iPhone app on the App Store. Its chip support matrix shows which operations have been confirmed on a real tag. |
 | [**private-image-converter**](https://github.com/hexpro-dev/private-image-converter) | Image format conversion that runs entirely in the browser. |
 | [**google-auth-secret-retriever**](https://github.com/hexpro-dev/google-auth-secret-retriever) | Reads secret keys from a Google Authenticator export. Published to npm. |
 
-Hex Citadel's server and client cores are MIT licensed. Hex NFC is source-available under the Business Source License 1.1, converting to Apache 2.0 in 2030, so that every privacy claim it makes can be read rather than believed. Those repositories are private while what is in them is still changing.
+Hex NFC is source-available under the Business Source License 1.1 and converts to Apache 2.0 on 1 June 2030. Until then you can read it, build it, audit it and send fixes; what the licence holds back is shipping a commercial fork. Hex Citadel's server and client cores are MIT licensed, and those repositories stay private while what is in them is still changing.
 
 <br>
 
